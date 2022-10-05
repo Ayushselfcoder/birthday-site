@@ -44,7 +44,7 @@ button#wishButton:hover {
 
 h1 {
     border-radius: 5px;
-    height: 40px;
+    height: auto;
     width: 50%;
     font-size: 60px;
     padding: 3px 6px;

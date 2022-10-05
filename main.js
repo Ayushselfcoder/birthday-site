@@ -3,6 +3,7 @@ const root = document.getElementById("root");
 console.log(window.location)
 if (!name) {
     root.innerHTML = `<div class="form">
+    <h1> Wish Somebody A Birthday</h1>
     <input type="text" id="name">
     <button id="wishButton">Wish!</button> 
     </div>`;
@@ -22,7 +23,7 @@ if (!name) {
     }
 } else {
     root.innerHTML = `
-    <h1> Happy Birthday ${name}!</h1>
+    <h1> Happy Birthday ${decodeURIComponent(name)}!</h1>
     <img src="cake.png" id="cake">
 `;
 

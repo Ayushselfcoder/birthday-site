@@ -1,6 +1,6 @@
 const name = window.location.href.split("name=")[1];
 const root = document.getElementById("root");
-
+console.log(window.location)
 if (!name) {
     root.innerHTML = `<div class="form">
     <input type="text" id="name">
@@ -12,11 +12,11 @@ if (!name) {
 
         if (!name) return alert('Fill the name first!');
 
-        const newUrl = window.location.pathname + `?name=${name}`;
+        const newUrl = window.location.origin + `?name=${name}`;
 
         navigator.clipboard.writeText(newUrl);
 
-        alert("Birthday Wish URL Copied!")
+        alert(`Birthday Wish URL Copied!\nUrl: ${newUrl}`)
 
         window.location.href = newUrl;
     }
